@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="detail-page">
+    <h1 class="details-h1">{{ post.title }}</h1>
+    <p class="details-p">{{ post.content }} </p>
+    <p><strong>Author:</strong> {{ post.author }}</p>
+    <p><strong>Published:</strong> {{ post.created_at|date:"F j, Y H:i" }}</p>
+    <hr>
+    <p>{{ post.text }}</p>
+    <a href="{% url 'blog_list' %}">Back to list</a>
+</div>
+{% endblock %}
